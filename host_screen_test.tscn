@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://di5dgqm04mywr"]
+
+[ext_resource type="Script" uid="uid://bx7f2t1ui1jr3" path="res://MultiplayerWorld.gd" id="1_m7wsm"]
+
+[node name="Node3D" type="Node3D" unique_id=1341847575]
+script = ExtResource("1_m7wsm")
+
+[node name="ui" type="CanvasLayer" parent="." unique_id=1194229329]
+
+[node name="ip_adress_label" type="Label" parent="ui" unique_id=559422839]
+offset_left = 313.0
+offset_top = 226.0
+offset_right = 745.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 23
+text = "56465"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="share_ip" type="Button" parent="ui" unique_id=428887254]
+offset_left = 334.0
+offset_top = 271.0
+offset_right = 719.0
+offset_bottom = 321.0
+theme_override_font_sizes/font_size = 30
+text = "share ip adress"
+
+[node name="host" type="Button" parent="ui" unique_id=1839654496]
+offset_left = 347.0
+offset_top = 373.0
+offset_right = 732.0
+offset_bottom = 423.0
+theme_override_font_sizes/font_size = 30
+text = "Host"
+
+[node name="join" type="Button" parent="ui" unique_id=711570658]
+offset_left = 350.0
+offset_top = 434.0
+offset_right = 735.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 30
+text = "join"
+
+[node name="ip_addres" type="LineEdit" parent="ui" unique_id=1078188055]
+offset_left = 394.0
+offset_top = 321.0
+offset_right = 679.0
+offset_bottom = 367.0
+theme_override_font_sizes/font_size = 20
+text = "click here"
+alignment = 1
+
+[node name="Button" type="Button" parent="ui" unique_id=1673292934]
+offset_left = 451.0
+offset_top = 118.0
+offset_right = 673.0
+offset_bottom = 193.0
+
+[connection signal="pressed" from="ui/share_ip" to="." method="_on_share_ip_pressed"]
+[connection signal="pressed" from="ui/host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="ui/join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="ui/Button" to="." method="_on_button_pressed"]
